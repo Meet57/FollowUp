@@ -1,0 +1,14 @@
+export PYTHONWARNINGS="ignore"
+
+python -m venv venv
+source venv/bin/activate  # or the Windows equivalent
+pip install -r requirements.txt
+
+
+
+Improvements: 
+handle multi-user
+scale with more messages
+logging
+better error handling
+integrate with email/SMS APIs.

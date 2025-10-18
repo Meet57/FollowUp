@@ -1,0 +1,6 @@
+venv/
+.env
+
+mongo-data/
+
+.vscode/
