@@ -24,8 +24,12 @@ with tab1:
         if user_input.strip():
             with st.spinner("Analyzing message..."):
                 result = process_message(user_input)
-            st.success("✅ Message processed")
-            st.json(result)
+                
+            if result["status"] == "success":
+                st.success("✓ Processed successfully")
+                st.text_area("Agent Output:", result["output"], height=150)
+            else:
+                st.error(result["output"])
         else:
             st.warning("Please type something first.")
 
